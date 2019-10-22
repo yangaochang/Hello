@@ -1,21 +1,16 @@
-// ¶¨ÒåAnimalÀà
-class Animal {		
-    //¶¨Òå¶¯Îï½ĞµÄ·½·¨		
-	void shout() {			  
-		System.out.println("¶¯Îï·¢³ö½ĞÉù");
-	}
+public class Example02 {
+public static void main(String[] args) {
+MyThread myThread = new MyThread(); 
+myThread.start();              
+while (true) {                          
+System.out.println("main()æ–¹æ³•åœ¨è¿è¡Œ");
 }
-// ¶¨ÒåDogÀà¼Ì³Ğ¶¯ÎïÀà
-class Dog extends Animal {    
-	// ¶¨Òå¹·½ĞµÄ·½·¨
-	void shout() {			 
-		System.out.println("ÍôÍô¡­¡­");
-	}
 }
-// ¶¨Òå²âÊÔÀà
-public class Example02 {	
-	public static void main(String[] args) {
-		Dog dog = new Dog(); // ´´½¨DogÀàµÄÊµÀı¶ÔÏó
-		dog.shout();           // µ÷ÓÃdogÖØĞ´µÄshout()·½·¨
-	}
+}
+class MyThread extends Thread {
+public void run() {
+while (true) {   
+System.out.println("MyThreadç±»çš„run()æ–¹æ³•åœ¨è¿è¡Œ");
+}	
+}
 }

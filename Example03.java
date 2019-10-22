@@ -1,28 +1,17 @@
-// ¶¨ÒåAnimalÀà
-class Animal {
-	String name = "¶¯Îï";
-     // ¶¨Òå¶¯Îï½ĞµÄ·½·¨
-	void shout() { 
-		System.out.println("¶¯Îï·¢³ö½ĞÉù");
-	}
+public class Example03 {
+public static void main(String[] args) {
+MyThread myThread = new MyThread();  
+Thread thread=new Thread(myThread);  
+thread.start();                      
+while (true) {
+System.out.println("main()æ–¹æ³•åœ¨è¿è¡Œ");
+ }
 }
-// ¶¨ÒåDogÀà¼Ì³Ğ¶¯ÎïÀà
-class Dog extends Animal {
-	String name = "È®Àà";
-     // ÖØĞ´¸¸ÀàµÄshout()·½·¨
-	 void shout() {
-		super.shout();	// ·ÃÎÊ¸¸ÀàµÄ³ÉÔ±·½·¨
-	}
-     // ¶¨Òå´òÓ¡nameµÄ·½·¨
-	void printName() {
-			System.out.println("name=" + super.name);	// ·ÃÎÊ¸¸ÀàµÄ³ÉÔ±±äÁ¿
-	}
 }
-// ¶¨Òå²âÊÔÀà 
-public class Example03{
-	public static void main(String[] args) {
-		Dog dog = new Dog();  // ´´½¨Ò»¸öDog¶ÔÏó
-		dog.shout();           // µ÷ÓÃdog¶ÔÏóÖØĞ´µÄshout()·½·¨
-		dog.printName();      // µ÷ÓÃdog¶ÔÏóµÄµÄprintName()·½·¨
-	}
+class MyThread implements Runnable {
+public void run() {       
+while (true) {
+System.out.println("MyThreadç±»çš„run()æ–¹æ³•åœ¨è¿è¡Œ");
+}
+}
 }
