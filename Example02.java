@@ -1,16 +1,16 @@
 public class Example02 {
-public static void main(String[] args) {
-MyThread myThread = new MyThread(); 
-myThread.start();              
-while (true) {                          
-System.out.println("main()æ–¹æ³•åœ¨è¿è¡Œ");
-}
-}
+	public static void main(String[] args) {
+		MyThread myThread = new MyThread(); // ´´½¨Ïß³ÌMyThreadµÄÏß³Ì¶ÔÏó
+		myThread.start();                      // ¿ªÆôÏß³Ì
+		while (true) {                          // Í¨¹ıËÀÑ­»·Óï¾ä´òÓ¡Êä³ö
+			System.out.println("main()·½·¨ÔÚÔËĞĞ");
+		}
+	}
 }
 class MyThread extends Thread {
-public void run() {
-while (true) {   
-System.out.println("MyThreadç±»çš„run()æ–¹æ³•åœ¨è¿è¡Œ");
-}	
-}
+	public void run() {
+		while (true) {    // Í¨¹ıËÀÑ­»·Óï¾ä´òÓ¡Êä³ö
+			System.out.println("MyThreadÀàµÄrun()·½·¨ÔÚÔËĞĞ");
+		}
+	}
 }

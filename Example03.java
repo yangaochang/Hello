@@ -1,17 +1,17 @@
 public class Example03 {
-public static void main(String[] args) {
-MyThread myThread = new MyThread();  
-Thread thread=new Thread(myThread);  
-thread.start();                      
-while (true) {
-System.out.println("main()æ–¹æ³•åœ¨è¿è¡Œ");
- }
-}
+	public static void main(String[] args) {
+		MyThread myThread = new MyThread();  // ´´½¨MyThreadµÄÊµÀı¶ÔÏó    
+		Thread thread=new Thread(myThread);  // ´´½¨Ïß³Ì¶ÔÏó
+		thread.start();                          // ¿ªÆôÏß³Ì£¬Ö´ĞĞÏß³ÌÖĞµÄrun()·½·¨
+		while (true) {
+			System.out.println("main()·½·¨ÔÚÔËĞĞ");
+		 }
+	   }
 }
 class MyThread implements Runnable {
-public void run() {       
-while (true) {
-System.out.println("MyThreadç±»çš„run()æ–¹æ³•åœ¨è¿è¡Œ");
-}
-}
+	public void run() {          // Ïß³ÌµÄ´úÂë¶Î£¬µ±µ÷ÓÃstart()·½·¨Ê±£¬Ïß³Ì´Ó´Ë´¦¿ªÊ¼Ö´ĞĞ
+		while (true) {
+			System.out.println("MyThreadÀàµÄrun()·½·¨ÔÚÔËĞĞ");
+		}
+	}
 }
